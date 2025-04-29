@@ -165,9 +165,10 @@
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li><b>Selective category filtering:</b> Excluded "Unknown", "Other Race", and "Refused" entries in the data to simplify the graph and focus attention only on the identifiable groups.</li>
+          <li><b>Exclusion of ambiguous groups:</b> Excluded "Unknown", "Other Race", and "Refused" entries in the data to simplify the graph and focus attention only on the identifiable groups.</li>
           <li><b>Color emphasis on Black complainants:</b> Used bold red coloring for the "Black" bar while muting other groups in gray. This directs the viewer's attention to the intended disparity.</li>
-          <li><b>Non-normalized percentage calculation:</b> Kept the percentage calculation based on the total dataset without renormalizing after exclusions, causing the visible groups to appear more dominant relative to the overall dataset.</li>
+          <li><b>Non-normalized percentage calculation:</b> Kept the percentage calculation based on the total dataset without renormalizing after exclusions. This makes the visible groups appear more "dominating" compared to the rest of the dataset.</li>
+          <li><b>Non-normalized percentage calculation:</b> Calculated percentages using the total number of offensive language complaints, including the excluded groups. This inflates the visible categories' proportions.</li>
         </ul>
         
       </section>
@@ -183,8 +184,8 @@
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li><b>Normalized by total complaints:</b> Instead of looking at raw counts, the chart calculates the percentage of each group's complaints that are about offensive language. This provides better context and prevents overemphasizing differences caused by group size.</li>
-          <li><b>Exclusion of ambiguous groups:</b> "Unknown," "Refused," and "Other Race" were excluded to maintain consistency in meaningful categories, avoiding noise in the data.</li>
+          <li><b>Normalized by total complaints:</b> Instead of looking at raw counts, this time I calculated the percentage of each group's complaints that are about offensive language. This provides better context and prevents overemphasizing differences caused by group size.</li>
+          <li><b>Exclusion of ambiguous groups:</b> Excluded "Unknown", "Other Race", and "Refused" entries in the data to simplify the graph and focus attention only on the identifiable groups.</li>
           <li><b>Neutral color palette:</b> Used calm blue and green colors to avoid drawing emotional attention to any specific group, making the visual seem more objective and factual.</li>
         </ul>
       </section>
@@ -192,11 +193,11 @@
       <section>
         <h2>Final Reflection</h2>
 
-        <p>Throughout this project, I explored how deliberate design choices can shape the way viewers interpret a dataset. In the proposition visualizations, I deliberately filtered certain data points, used bold colors to draw attention, and didn't normalize my percentages. This made Black complainants look disproportionately represented. These techniques allowed me to subtly guide viewers toward a particular conclusion without them realizing they were being led there.
+        <p>When I tackled the proposition visualization, I started by cleaning up the data: cutting out ambiguous categories like "Unknown" and "Other Race" that didn't really add much, but still using the original totals (including those excluded groups) when calculating my percentage to inflate the numbers for the groups I did show. I used this bold red color for the "Black" category while keeping everything else in these subtler gray shades. These techniques allowed me to subtly guide viewers toward a particular conclusion without them realizing they were being led there.
 
-          <br>For the opposition side, I took a different approach, which are normalizing for population differences, choosing more neutral colors, and using a horizontal layout that encouraged viewers to slow down and compare carefully. Here, the goal was to present a more measured, less emotionally charged view, showing that offensive language complaints are more proportionally distributed across racial groups. Same data, completely different story.
+          <br>For the opposition piece, I took a different approach. I began by calculating the percentage of each group's total complaints that were related to offensive language, thereby normalizing for group size. I excluded the same ambiguous groups as I did in the proposition, but this time used the filtered dataset consistently for both numerator and denominator. I used soft, neutral colors like blue and green to reduce emotional framing and presented the chart horizontally to encourage slower, more thoughtful comparison. The result was a visualization that downplayed the perceived disparity and conveyed a much more balanced interpretation.
           
-          <br>The ethical implications of these design choices are significant. Change a color scheme, adjust how you aggregate numbers, or reframe the context – suddenly you're telling an entirely different story without changing a single data point. You can do a lot to mislead without technically lying. 
+          <br>The ethical implications of these design choices are significant. Change a color scheme, adjust how you aggregate numbers, or reframe the context, and suddenly you're telling an entirely different story without changing a single data point. You can do a lot to mislead without technically lying. 
           
           <br>Ultimately, this project reminds me of the ethics in data science. When we design visualizations, especially around sensitive topics like race and policing, we have a real responsibility. It's not just about presenting truth, but making sure our design choices don't subtly distort that truth. The balance between creating something persuasive and something responsible is tricky, but absolutely necessary. That's the lesson I'll carry forward.</p>
       </section>
